@@ -30,10 +30,7 @@
     php artisan test
 ### Feature 一部指定
     php artisan test --filter=*****
-### Dusk
-    php artisan dusk
-### Dusk 一部指定
-    php artisan dusk --filter=*****
+
 
 ## 管理者ログイン
     'name'      =>  管理者

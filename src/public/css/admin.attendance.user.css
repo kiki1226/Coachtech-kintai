@@ -1,0 +1,117 @@
+/* ========== Page Wrapper ========== */
+.main {
+    background-color: #F0EFF2;
+}
+
+.wrap {
+    background-color: #F0EFF2;
+    padding: 80px 0px 700px;
+}
+
+.card {
+    width: 900px;
+    background-color: #F0EFF2;
+    margin: 0 auto;
+}
+/* ========== 月タイトル========== */
+.page-title,
+h1 {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.page-title::before,
+h1::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    width: 6px;
+    height: 26px;
+    background: #111;
+    border-radius: 3px;
+}
+/* ===== 日付ナビ（参考画像寄せ：白いピルのレール） ===== */
+/* --- 月ナビ --- */
+.monthnav {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 10px 0 40px;
+    border-radius: 8px;
+}
+
+.monthnav .secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 10px;
+    font-size: 20px;
+    color: #737373;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.monthnav .secondary:hover {
+    background: #f6f8fa;
+}
+
+.monthnav .secondary img {
+    width: 20px;
+    height: 15px;
+}
+.img-right{
+    width: 20px;
+    height: 15px;
+    transform: scaleX(-1);
+}
+.monthform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.monthform input[type="month"] {
+    min-width: 120px;
+    font-size: 20px;
+    padding: 6px 10px;
+    color: #111;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.monthform input[type="month"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+/* ========== ボタン========== */
+.actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px;
+}
+
+.btn-dark {
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    margin: 0px;
+    padding: 24px;
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}

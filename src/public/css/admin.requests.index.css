@@ -1,0 +1,89 @@
+/* ==========Page Wrapper ========== */
+.wrap {
+    background-color: #F0EFF2;
+    padding: 80px 0px 700px;
+}
+
+.card {
+    width: 900px;
+    background-color: #F0EFF2;
+    margin: 0 auto;
+}
+/* ==========taitol========== */
+/* タブ行 */
+.req-toolbar {
+    display: flex;
+    gap: 60px;
+    align-items: flex-end;
+    margin: 8px 15px 6px;
+    font-size: 20px;
+}
+
+/* タブリンク（通常） */
+.req-toolbar .req-month {
+    display: inline-block;
+    padding-bottom: 6px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    /* 通常は細め */
+    border-bottom: 2px solid transparent;
+    transition: opacity .15s ease;
+}
+
+.req-toolbar .req-month:hover {
+    opacity: .8;
+}
+
+/* アクティブ → 太字＋下線 */
+.req-toolbar>div.is-active>.req-month {
+    font-weight: 700;
+    color: #111;
+    font-size: 20px;
+}
+
+/* 下のベースライン */
+.req-tab-underline {
+    height: 2px;
+    background: #111;
+    opacity: .35;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+
+/* ==========承認の有無　アンダーバー========== */
+.req-tab-underline {
+    height: 2px;
+    background-color: #000000;
+    width: 900px;
+    margin-bottom: 50px;
+}
+
+.req-tabs .tab {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #fff;
+    text-decoration: none;
+    color: #222;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.req-tabs .tab.is-active {
+    font-weight: 700;
+    /* ← 表示中タブを太字に */
+}
+
+.req-tabs .tab.is-active {
+    color: #111;
+}
+
+.text-right {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #737373;
+}
+/* ========== teble ========== */

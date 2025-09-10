@@ -1,0 +1,94 @@
+/* ==========Page Wrapper ========== */
+.wrap {
+    background-color: #F0EFF2;
+    padding: 80px 0px 700px;
+}
+
+.card {
+    width: 900px;
+    background-color: #F0EFF2;
+    margin: 0 auto;
+}
+
+/* ==========table========== */
+.table {
+    height: 500px;
+}
+
+/* ==========ボタン========== */
+.button {
+    margin: 10px 0 16px 0;
+    padding: 30px 14px;
+    display: flex;
+    gap: 50px;
+    justify-content: flex-end;
+}
+
+.btn {
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px;
+}
+
+.btn-dark {
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+.btn-danger{
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    background: #b2afaf;
+    color: #fff;
+    border-color: #504e4e;
+}
+
+.btn-outline-secondary{
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    background: #2895ee;
+    color: #fff;
+    border-color: #1d0cde;
+    justify-content: flex-start;
+}
+.btn-secondary{
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    background: #0ee86c;
+    color: #fff;
+    border-color: #10af2b;
+    text-decoration: none;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+.btn-zumi{
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    background: #f70303;
+    color: #fff;
+    border-color: #111;
+    text-decoration: none;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+.button from {
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* ==========テーブル========== */
+th {
+    width: 300px;
+}
+.time-view {
+    margin-right: 100px;
+    margin-left: 100px;
+}

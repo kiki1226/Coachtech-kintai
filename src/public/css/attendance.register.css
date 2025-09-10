@@ -1,0 +1,168 @@
+.wrap {
+    padding: 10px 16px 200px;
+    width: 680px;
+    margin: 0px auto;
+    align-items: center;
+}
+
+.card {
+    align-items: center;
+}
+
+.clock-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px
+}
+
+.state {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #C8C8C8;
+    color: #696969;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 100px auto 0px;
+}
+
+.clock-date {
+    font-size: 40px;
+    color: #666;
+    margin-top: 50px;
+}
+
+.clock-time {
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-top: 30px;
+}
+
+
+.hint {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 8px
+
+}
+
+.today-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.punch-actions .btn.primary {
+    width: 221px;
+    height: 77px;
+    padding: 0;
+    font-size: 32px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 100px;
+
+}
+
+/* ===== 打刻ボタン共通 ===== */
+.punch-actions {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 80px;
+
+}
+
+.punch-btn {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: .25em;
+    border-radius: 14px;
+    color: #fff;
+    background: #111;
+    /* 基本は黒ボタン */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .12);
+    transition: transform .02s ease, filter .15s ease, opacity .2s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+.punch-btn:hover {
+    filter: brightness(1.05);
+}
+
+.punch-btn:active {
+    transform: translateY(1px);
+}
+
+.punch-btn:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+/* サイズ */
+.punch-btn--main {
+    /* メインアクション（大） */
+    width: 221px;
+    height: 77px;
+    font-size: 32px;
+}
+
+.punch-btn--sm {
+    width: 221px;
+    height: 77px;
+    font-size: 32px;
+}
+
+/* バリアント（色） */
+.punch-btn--primary {
+    /* 黒（標準） */
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.punch-btn--danger {
+    /* 危険操作（退勤などで使いたければ） */
+    background: #000;
+    color: #fff;
+}
+
+.punch-btn--ghost {
+    /* 枠線のみの薄いボタンが必要なら */
+    background: transparent;
+    color: #111;
+    border: 2px solid #111;
+}
+.end{
+    font-size: 26px;
+    color: #666;
+    text-align: center;
+    margin-top: 8px;
+}
+/* レイアウト微調整（任意） */
+.punch-wrap .hint {
+    margin-top: 18px;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+}

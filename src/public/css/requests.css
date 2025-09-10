@@ -1,0 +1,185 @@
+/******** レイアウト *******/
+.wrap {
+    width: 100%;
+}
+
+.card {
+    width: 900px;
+    margin: 0px auto
+}
+
+.req-wrap {
+    padding: 8px 0;
+}
+
+.req-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 16px;
+}
+
+
+/******** タイトル *******/
+.alert-success {
+    border-radius: 8px;
+    color: black;
+    margin-bottom: 16px;
+    display: flex;
+}
+
+.alert-space {
+    margin-top: 18px;
+    height: 40px;
+    width: 10px;
+    background-color: #000000;
+}
+
+.att-index__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 15px 0 16px 20px;
+}
+
+/******** ツールバー *******/
+.req-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 900px;
+    /* ここがポイント */
+    list-style: none;
+    /* ← ul のマーカーを消す */
+    margin: 0 0 8px;
+    padding: 5px;
+}
+
+.req-toolbar li {
+    list-style: none;
+    /* 念のため li 側も消す */
+}
+
+/* Safari 対応（::marker を潰す） */
+.req-toolbar li::marker {
+    content: none;
+}
+
+/* ==========taitol========== */
+/* タブ行 */
+.req-toolbar {
+    display: flex;
+    gap: 60px;
+    align-items: flex-end;
+    margin: 8px 15px 6px;
+    font-size: 20px;
+}
+
+/* タブリンク（通常） */
+.req-toolbar .req-month {
+    display: inline-block;
+    padding-bottom: 6px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    /* 通常は細め */
+    border-bottom: 2px solid transparent;
+    transition: opacity .15s ease;
+}
+
+.req-toolbar .req-month:hover {
+    opacity: .8;
+}
+
+/* アクティブ → 太字＋下線 */
+.req-toolbar>div.is-active>.req-month {
+    font-weight: 700;
+    color: #111;
+    font-size: 20px;
+}
+
+/* 下のベースライン */
+.req-tab-underline {
+    height: 2px;
+    background: #111;
+    opacity: .35;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.req-toolbar li.is-active .req-month {
+    color: #000;
+    font-weight: 700;
+    /* アクティブの下線 */
+}
+/******** タブ *******/
+.req-tabs {
+    display: inline-flex;
+    gap: 50px;
+    margin-bottom: 5px;
+    width: 900px;
+}
+.req-tab-underline {
+    height: 2px;
+    background-color: #000000;
+    width: 900px;
+    margin-bottom: 50px;
+}
+
+.req-tabs .tab {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #fff;
+    text-decoration: none;
+    color: #222;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.req-tabs .tab.is-active {
+    font-weight: 700;
+    /* ← 表示中タブを太字に */
+}
+.req-tabs .tab.is-active {
+    color: #111;
+}
+
+/******** テーブル *******/ 
+.req-table {
+    width: 900px;
+    background: #fff;
+    border: 2px solid #eef0f5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(17, 24, 39, .04);
+}
+
+.req-table th,
+.req-table td {
+    padding: 10px 12px;
+    font-size: 20px;
+    border-bottom: 3px solid #E1E1E1;
+}
+
+.req-table thead th {
+    background: #fafafa;
+    font-weight: 700;
+    color: #737373;
+}
+
+.req-table tbody tr:hover {
+    background: #fcfcfc;
+}
+
+.req-table .td-reason {
+    color: #555;
+}
+
+.req-table .link-detail {
+    color: #666;
+    text-decoration: underline;
+}
+
+.req-table .empty {
+    text-align: center;
+    color: #888;
+}
+

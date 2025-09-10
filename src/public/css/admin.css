@@ -1,0 +1,133 @@
+:root {
+    --brand: #0a0f1a;
+    --card: #fff;
+    --border: #e5e7eb;
+    --muted: #6b7280;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    background: var(--bg);
+}
+
+header {
+    background: var(--brand);
+    color: #fff;
+    height: 80px;
+}
+
+.bar {
+    margin: 0 auto;
+    padding: 25px 18px;
+    display: flex;
+    align-items: center;
+    gap: 300px;
+    height: 80px;
+    background: #0b1220;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+    align-items: center;
+}
+
+
+
+.brand img {
+    height: 36px;
+    width: 370px;
+    display: block;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 18px;
+    opacity: .9
+}
+
+nav a:hover {
+    opacity: 1
+}
+
+.wrap {
+    align-items: center;
+}
+
+.h1 {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 20px 0
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #f2f3f6;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px
+}
+
+/* ========== Section Title ========== */
+.page-title {
+    margin: 0px 10px 0px;
+
+}
+
+.alert-success {
+    border-radius: 8px;
+    color: black;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.alert-space {
+    height: 50px;
+    width: 10px;
+    background-color: #000000;
+}
+/* ========== Section table========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border)
+}
+
+th,
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 16px
+}
+
+tr {
+    background: #f7f7f9;
+    text-align: center;
+    color: #737373;
+    font-weight: 700;
+}
+
+td:last-child a {
+    border-bottom: none;
+}
+
+.muted {
+    color: var(--muted)
+}

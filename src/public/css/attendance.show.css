@@ -1,0 +1,101 @@
+.wrap {
+    background-color: #F0EFF2;
+    padding: 100px 90px 200px;
+
+}
+
+.card {
+    width: 900px;
+    background-color: #F0EFF2;
+    margin: 0 auto;
+}
+
+.alert-success {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 40px;
+}
+
+.alert.alert-success{
+    width: 900px;
+    border-radius: 8px;
+}
+
+.alert-space {
+    background-color: #000;
+    height: 40px;
+    width: 5px;
+}
+
+.detail-title {
+    font-size: 30px;
+    font-weight: 700;
+    width: 700px;
+}
+
+.detail-card {
+    border-radius: 12px
+}
+
+.detail-content {
+    margin-top: 40px;
+    background: #fff;
+    border: 1px solid #eef0f5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(17, 24, 39, .04);
+}
+
+.detail-row {
+    display: flex;
+    gap: 140px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #E1E1E1;
+
+}
+
+.detail-row .label {
+    margin-left: 70px;
+    font-size: 20px;
+    width: 140px;
+    color: #666
+}
+
+.date-split {
+    display: flex;
+    gap: 220px;
+    align-items: baseline;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 16px
+
+}
+
+.date-syu .date-tai .date-kyu .date-kei {
+    margin-right: 65px;
+    padding: 5px 15px;
+}
+
+.date-biko {
+    margin-right: 65px;
+    padding: 5px 15px;
+    min-height: 60px;
+    width: 450px;
+    white-space: pre-wrap; /* 改行を反映 */
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    color: #FF000080;
+    font-size: 18px;
+    text-decoration: none;
+}

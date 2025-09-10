@@ -1,0 +1,104 @@
+:root {
+    --brand-bg: #0a0f1a;
+    /* 黒帯 */
+    --text: #111;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --card: #fff;
+    --btn: #0a0a0a;
+    --btn-txt: #fff;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    background: #fff;
+    color: var(--text);
+}
+
+header {
+    padding: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== Header (general/admin 共通) ===== */
+.site-header {
+    height: 80px;
+    background: #0b1220;
+    color: #fff;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    height: 36px;
+    width: 370px;
+    margin: 0;
+}
+
+.brand img {
+    height: 36px;
+    width: 370px;
+    display: block;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header-nav a:hover {
+    opacity: .86;
+}
+
+.logout-form {
+    display: inline;
+    margin: 0px;
+}
+
+.linklike {
+    background: none;
+    border: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.linklike:hover {
+    opacity: .86;
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+    height: 28px
+}
+.wrap {
+    margin: 0px auto;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}

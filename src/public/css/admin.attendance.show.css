@@ -1,0 +1,171 @@
+/* ========== Page Wrapper ========== */
+.wrap {
+    background-color: #F0EFF2;
+    padding: 80px 0px 700px;
+}
+
+.card {
+    width: 900px;
+    background-color: #F0EFF2;
+    margin: 0 auto;
+}
+
+/* ========== Page Title ========== 
+admin.css記入
+*/
+
+/* ========== Page Table ========== */
+.show-card {
+    padding: 0;
+}
+
+.show-card form {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 180px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #efefef;
+}
+.chip-year {
+    display: flex;
+    gap:90px;
+    font-size: 16px;
+}
+.row h6 {
+    width: 120px;
+    margin: 0;
+    color: #6b7280;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.chip {
+    display: inline-block;
+    background: #f7f7f8;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+.chip-name{
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 16px;
+}
+
+.time {
+    width: 120px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.tilde {
+    color: #9ca3af;
+}
+
+.note {
+    width: 470px;
+    height: 70px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
+}
+/* ========== 編集ボタン ========== */
+.actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+/*******エラーメッセージ*********/
+.error {
+    color: red;
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    color: #842029;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+/* 行のレイアウトを崩さず、エラーは入力の下に */
+
+.show .row>h6 {
+    width: 110px;
+    /* 左ラベル幅 */
+    margin: 0;
+    padding-top: 8px;
+    /* ラベルを入力と揃える */
+    font-weight: 700;
+}
+
+.show .field {
+    flex: 1;
+    min-width: 260px;
+}
+
+.show .pair {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.show .time {
+    height: 38px;
+}
+
+.show .tilde {
+    opacity: .6;
+}
+
+/* エラー表示 */
+.show .errors {
+    margin-top: 6px;
+}
+
+.show .error {
+    color: #d32f2f;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 2px 0 0;
+}
+
+/* 備考テキストエリアの下にも同じ見た目を適用 */
+.show textarea.note+.error {
+    margin-top: 6px;
+}

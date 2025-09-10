@@ -1,0 +1,71 @@
+.page-title {
+    position: relative;
+    font-weight: 800;
+    font-size: 22px;
+    margin: 6px 0 18px;
+}
+
+.page-title:before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    width: 6px;
+    height: 22px;
+    background: #111;
+    border-radius: 3px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.toolbar input[type="text"],
+.toolbar input[type="month"] {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fff;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.table thead th {
+    background: #f7f7f8;
+    color: #6b7280;
+    font-weight: 700;
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #ececec;
+}
+
+.table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #f2f2f4;
+}
+
+.text-right {
+    text-align: right;
+}

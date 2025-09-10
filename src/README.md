@@ -1,41 +1,41 @@
 # kintai
 
 ## 環境構築
-### Dockerビルド
-# クローン
+## Dockerビルド
+### クローン
 git clone git@github.com:kiki1226/Coachtech-kintai.git
-# 起動
+### 起動
 docker-compose up -d
-# PHP コンテナに入る
+### PHP コンテナに入る
 docker-compose exec php bash
-# 停止
+### 停止
 docker-compose down
 
-### Laravel環境構築
-# 依存関係インストール
+## Laravel環境構築
+### 依存関係インストール
 composer install
-# APP_KEY 生成
+### APP_KEY 生成
 php artisan key:generate
-# ストレージ公開
+### ストレージ公開
 php artisan storage:link
-# .env 用意
+### .env 用意
 cp .env.example .env
-# マイグレーション
+### マイグレーション
 php artisan migrate
-# シーディング
+### シーディング
 php artisan migrate --seed
 
-### テストコード
-# Feature / Unit テスト（PHPUnit）
+## テストコード
+### Feature / Unit テスト（PHPUnit）
 php artisan test
-# Feature 一部指定
+### Feature 一部指定
 php artisan test --filter=*****
-# Dusk
+### Dusk
 php artisan dusk
-# Dusk 一部指定
+### Dusk 一部指定
 php artisan dusk --filter=*****
 
-### 管理者ログイン
+## 管理者ログイン
     'name'      =>  管理者
     'email'     =>  admin@example.com
     'password'  =>  password

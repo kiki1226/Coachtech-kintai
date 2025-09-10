@@ -3,37 +3,37 @@
 ## 環境構築
 ## Dockerビルド
 ### クローン
-git clone git@github.com:kiki1226/Coachtech-kintai.git
+    git clone git@github.com:kiki1226/Coachtech-kintai.git
 ### 起動
-docker-compose up -d
+    docker-compose up -d
 ### PHP コンテナに入る
-docker-compose exec php bash
+    docker-compose exec php bash
 ### 停止
-docker-compose down
+    docker-compose down
 
 ## Laravel環境構築
 ### 依存関係インストール
-composer install
+    composer install
 ### APP_KEY 生成
-php artisan key:generate
+    php artisan key:generate
 ### ストレージ公開
-php artisan storage:link
+    php artisan storage:link
 ### .env 用意
-cp .env.example .env
+    cp .env.example .env
 ### マイグレーション
-php artisan migrate
+    php artisan migrate
 ### シーディング
-php artisan migrate --seed
+    php artisan migrate --seed
 
 ## テストコード
 ### Feature / Unit テスト（PHPUnit）
-php artisan test
+    php artisan test
 ### Feature 一部指定
-php artisan test --filter=*****
+    php artisan test --filter=*****
 ### Dusk
-php artisan dusk
+    php artisan dusk
 ### Dusk 一部指定
-php artisan dusk --filter=*****
+    php artisan dusk --filter=*****
 
 ## 管理者ログイン
     'name'      =>  管理者
@@ -57,77 +57,58 @@ php artisan dusk --filter=*****
 
 ## ER図
 
-```mermaid
-%% カスタムテーマ（GitHubでも有効）
-%% 参考: https://mermaid.js.org/config/theming.html#theme-variables
-%%{init: {
-  "theme": "base",
-  "themeVariables": {
-    "fontFamily": "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Helvetica Neue, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'",
-    "primaryColor":   "#F0F7FF",   
-    "primaryBorderColor": "#4B9EFF",
-    "primaryTextColor":   "#0B306B",
-    "secondaryColor": "#FFFFFF",
-    "tertiaryColor":  "#E8F2FF",
-    "lineColor":      "#6A8CA6",
-    "edgeLabelBackground":"#ffffff",
-    "nodeBorder":     "#4B9EFF"
-  }
-}}%%
-
 erDiagram
-
-    Table users {
-      id bigint [pk]
-      name varchar
-      email varchar
-      password varchar
-      role varchar
-      zipcode varchar
-      address varchar
-      building varchar
-      avatar varchar
+    users {
+        bigint id PK
+        varchar name
+        varchar email
+        varchar password
+        varchar role
+        varchar zipcode
+        varchar address
+        varchar building
+        varchar avatar
     }
 
-    Table attendances {
-      id bigint [pk]
-      user_id bigint [ref: > users.id]
-      work_date date
-      clock_in time
-      clock_out time
-      break1_start time
-      break1_end time
-      break_started_at time
+    attendances {
+        bigint id PK
+        bigint user_id FK
+        date work_date
+        time clock_in
+        time clock_out
+        time break1_start
+        time break1_end
+        time break_started_at
     }
 
-    Table requests {
-      id bigint [pk]
-      user_id bigint [ref: > users.id]
-      attendance_id bigint [ref: > attendances.id]
-      type varchar
-      status varchar
-      reason text
-      target_date date
+    requests {
+        bigint id PK
+        bigint user_id FK
+        bigint attendance_id FK
+        varchar type
+        varchar status
+        text reason
+        date target_date
     }
 
-    Table work_rules {
-      id bigint [pk]
-      rule_name varchar
-      start_time time
-      end_time time
+    work_rules {
+        bigint id PK
+        varchar rule_name
+        time start_time
+        time end_time
     }
 
-    Table holidays {
-      id bigint [pk]
-      holiday_date date
-      name varchar
+    holidays {
+        bigint id PK
+        date holiday_date
+        varchar name
     }
 
-    Ref: users.id < attendances.user_id
-    Ref: users.id < requests.user_id
-    Ref: attendances.id < requests.attendance_id
-    Ref: work_rules.id < users.id
-    Ref: holidays.id < attendances.id
+    users ||--o{ attendances : "has"
+    users ||--o{ requests : "submits"
+    attendances ||--o{ requests : "related"
+    work_rules ||--o{ users : "applies"
+    holidays ||--o{ attendances : "affects"
 
 ```
 

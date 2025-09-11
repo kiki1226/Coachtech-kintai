@@ -52,8 +52,9 @@
     nginx   : 1.21.1
     jQuery  :'3.8'
 
-## ER図
+# ER図
 
+```mermaid
 erDiagram
     users {
         bigint id PK
@@ -102,10 +103,8 @@ erDiagram
     }
 
     users ||--o{ attendances : "has"
-    users ||--o{ requests : "submits"
-    attendances ||--o{ requests : "related"
+    users ||--o{ requests : "makes"
+    attendances ||--o{ requests : "relates"
     work_rules ||--o{ users : "applies"
     holidays ||--o{ attendances : "affects"
-
 ```
-

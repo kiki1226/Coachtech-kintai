@@ -49,6 +49,8 @@ class AttendanceRequest extends Model
     public const STATUS_LABELS = [
         'pending'  => '承認待ち',
         'approved' => '承認済み',
+        'rejected' => '却下済み',   // ← これを追加
+        'canceled' => '取消',
     ];
     // リレーション
     public function user()

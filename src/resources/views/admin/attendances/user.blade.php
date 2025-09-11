@@ -10,7 +10,7 @@
     <div class="alert-space">　</div>
     <h1 class="page-title">{{ $user->name }} さんの勤怠（{{ $month->format('Y年n月') }}）</h1>
   </div>
-
+  
   {{-- 月ナビ --}}
   <div class="monthnav">
     <a class="secondary"href="{{ route('admin.attendances.user', ['user'=>$user->id, 'month'=>$prevMonth]) }}">
@@ -23,6 +23,7 @@
     <a class="secondary"
        href="{{ route('admin.attendances.user', ['user'=>$user->id, 'month'=>$nextMonth]) }}">翌月<img src="{{ asset('products/image1.png') }}" alt="→" class="img-right"></a>
   </div>
+  
 
   {{-- 表 --}}
   <div class="card" style="padding:0;">
@@ -56,6 +57,10 @@
   </div>
 
   <div class="actions">
+    <div class="button">
+          <a type="button" class="btn btn-outline-secondary"     onclick="history.back()">戻る</a>
+    </div>
+
     <a class="btn btn-dark"
        href="{{ route('admin.attendances.user', ['user'=>$user->id, 'month'=>$month->format('Y-m'), 'export'=>'csv']) }}">
       CSV出力

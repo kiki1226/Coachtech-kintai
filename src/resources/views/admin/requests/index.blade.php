@@ -49,7 +49,7 @@
             </span>
           </td>
           <td>{{ $r->user->name ?? '' }}</td>
-          <td>{{ optional($r->target_date)->format('Y/m/d') ?? '' }}</td>
+          <td> {{ optional($r->target_date ?? $r->attendance?->work_date)->format('Y/m/d') }}</td>
           <td title="{{ $r->reason }}">{{ Str::limit($r->reason ?? '', 20) }}</td>
           <td>{{ optional($r->created_at)->format('Y/m/d') }}</td>
           <td class="text-right">

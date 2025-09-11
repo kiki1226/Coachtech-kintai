@@ -73,6 +73,7 @@
     display: flex;
     gap: 12px;
     justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 16px
 
 }
@@ -98,4 +99,14 @@
     color: #FF000080;
     font-size: 18px;
     text-decoration: none;
+}
+
+.btn-1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    color: #004cff80;
+    font-size: 18px;
 }

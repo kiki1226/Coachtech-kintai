@@ -16,7 +16,7 @@
 
   <div class="card">
     @php
-      $ymd = optional($r->target_date)->format('Y年n月j日'); // 申請の対象日を採用
+      $ymd = optional($r->target_date ?? $a?->work_date)->format('Y年n月j日');
       $fmt = fn($dt) => optional($dt)->format('H:i') ?: '';
       $in  = $fmt(optional($a)->clock_in_at);
       $out = $fmt(optional($a)->clock_out_at);
@@ -68,26 +68,30 @@
   </table>
 
     {{-- フッターボタン：状態で出し分け --}}
+   
     <div class="button">
-      <button type="button" class="btn btn-outline-secondary" onclick="history.back()">戻る</button>
-      @if($r->status === 'pending')
-        {{-- 却下ボタン --}}
-        <form method="POST" action="{{ route('admin.requests.reject', ['request' => $r->id]) }}">
-            @csrf
-            <button type="submit" class="btn btn-danger">却下</button>
-        </form>
-        {{-- 承認 --}}
-        <form method="POST" action="{{ route('admin.requests.approve', ['request' => $r->id]) }}">
-          @csrf
-          <button class="btn btn-dark">承認</button>
-        </form>
-      @elseif($r->status === 'approved')
-        {{-- 申請済み → 承認済みタブの一覧へ --}}
-        <a class="btn btn-zumi" href="{{ route('admin.requests.index', ['tab' => 'approved']) }}">申請済み</a>
+        <a type="button" class="btn btn-outline-secondary"     onclick="history.back()">戻る</a>
 
-      @elseif($r->status === 'rejected')
-        <a class="btn btn-secondary" href="{{ route('admin.requests.index',['tab' => 'rejected']) }}">却下済み</a>
-      @endif
+        <div class="button-1">
+        @if($r->status === 'pending')
+          {{-- 却下ボタン --}}
+          <form method="POST" action="{{ route('admin.requests.reject', ['request' => $r->id]) }}">
+              @csrf
+              <button type="submit" class="btn btn-danger">却下</button>
+          </form>
+          {{-- 承認 --}}
+          <form method="POST" action="{{ route('admin.requests.approve', ['request' => $r->id]) }}">
+            @csrf
+            <button class="btn btn-dark">承認</button>
+          </form>
+        @elseif($r->status === 'approved')
+          {{-- 申請済み → 承認済みタブの一覧へ --}}
+          <a class="btn btn-zumi" href="{{ route('admin.requests.index', ['tab' => 'approved']) }}">申請済み</a>
+
+        @elseif($r->status === 'rejected')
+          <a class="btn btn-secondary" href="{{ route('admin.requests.index',['tab' => 'rejected']) }}">却下済み</a>
+        @endif
+      </div>
     </div>
   </div>
 </div>

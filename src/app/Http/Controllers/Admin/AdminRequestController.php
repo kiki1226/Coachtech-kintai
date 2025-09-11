@@ -36,13 +36,19 @@ class AdminRequestController extends Controller
     /** 申請一覧（簡単フィルタ付き） */
     public function index(HttpRequest $http)
     {
-        $tab = $http->query('tab', 'pending');          // pending | approved
-        $status = $tab === 'approved' ? 'approved' : 'pending';
+        $tab = $http->query('tab', 'pending'); // デフォルトは pending
 
-        $requests = AttendanceRequest::query()
-            ->with('user')
-            ->where('status', $status)
-            ->latest('id')
+        $query = AttendanceRequest::with('user');
+
+        if ($tab === 'approved') {
+            $query->where('status', 'approved');
+        } elseif ($tab === 'rejected') {
+            $query->where('status', 'rejected');
+        } else {
+            $query->where('status', 'pending');
+        }
+
+        $requests = $query->latest('id')
             ->paginate(20)
             ->appends(['tab' => $tab]);
 
@@ -54,7 +60,7 @@ class AdminRequestController extends Controller
 
         return view('admin.requests.index', compact('requests', 'tab', 'typeLabels'));
     }
-
+    
     /** 申請詳細 */
     public function show(AttendanceRequest $request)   // ← モデルは $request（ルート {request} と一致）
     {

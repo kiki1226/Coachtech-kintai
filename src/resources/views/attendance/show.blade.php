@@ -81,7 +81,10 @@
         {{-- 編集ボタンは出さない / disabled 等 --}}
         @else
         <a href="{{ route('attendance.index', ['attendance' => $attendance->id, 'm' => request('m')]) }}"
-            class="btn">承認待ちのため修正できません</a>
+            class="btn-1">戻る</a>
+
+        <div class="btn">＊承認待ちのため修正できません</div>
+        
         @endif
     </div>
 </div>

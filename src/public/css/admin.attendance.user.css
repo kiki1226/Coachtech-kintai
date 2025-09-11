@@ -95,6 +95,7 @@ h1::before {
     margin-top: 16px;
     display: flex;
     justify-content: flex-end;
+    justify-content: space-between;
     gap: 12px;
 }
 
@@ -114,4 +115,15 @@ h1::before {
     background: #111;
     color: #fff;
     border-color: #111;
+}
+
+.btn-outline-secondary {
+    font-size: 20px;
+    color: #04e7f7;
+    text-decoration: underline;
+    text-decoration-color: #04e7f7;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 20px;
 }
